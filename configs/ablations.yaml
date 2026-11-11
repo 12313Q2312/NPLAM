@@ -1,0 +1,85 @@
+seeds:
+- 10
+- 11
+- 12
+tasks:
+- name: mixed30
+  samples: 1600
+hidden: 50
+epochs: 400
+batch_size: 256
+patience: 100
+fs_threshold: 0.05
+sd_threshold: 0.05
+plots: true
+models:
+- name: nplam
+  grid:
+  - lr: 0.01
+    lambdas:
+    - 0.0003
+    - 0.0003
+    - 1.0e-05
+- name: nplam
+  grid:
+  - lr: 0.01
+    lambdas:
+    - 0.0003
+    - 0.0003
+    - 1.0e-05
+  label: no_l1
+  ablation: no_l1
+- name: nplam
+  grid:
+  - lr: 0.01
+    lambdas:
+    - 0.0003
+    - 0.0003
+    - 1.0e-05
+  label: no_l2
+  ablation: no_l2
+- name: nplam
+  grid:
+  - lr: 0.01
+    lambdas:
+    - 0.0003
+    - 0.0003
+    - 1.0e-05
+  label: no_fs
+  ablation: no_fs
+- name: nplam
+  grid:
+  - lr: 0.01
+    lambdas:
+    - 0.0003
+    - 0.0003
+    - 1.0e-05
+  label: no_sd
+  ablation: no_sd
+- name: nplam
+  grid:
+  - lr: 0.01
+    lambdas:
+    - 0.0003
+    - 0.0003
+    - 1.0e-05
+  label: no_reg
+  ablation: no_reg
+- name: nplam
+  grid:
+  - lr: 0.01
+    lambdas:
+    - 0.0003
+    - 0.0003
+    - 1.0e-05
+  label: train_hidden
+  ablation: train_hidden
+- name: nplam
+  grid:
+  - lr: 0.01
+    lambdas:
+    - 0.01
+    - 0.01
+    - 0.0005
+  label: legacy
+  mode: legacy

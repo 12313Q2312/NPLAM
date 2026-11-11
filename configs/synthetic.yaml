@@ -1,0 +1,59 @@
+seeds:
+- 10
+- 11
+- 12
+- 13
+- 14
+- 15
+- 16
+- 17
+- 18
+- 19
+tasks:
+- name: mixed30
+  samples: 1600
+- name: linear30
+  samples: 1600
+- name: nonlinear30
+  samples: 1600
+- name: dense30
+  samples: 1600
+hidden: 50
+epochs: 400
+batch_size: 256
+patience: 100
+fs_threshold: 0.05
+sd_threshold: 0.05
+plots: true
+models:
+- name: nplam
+  grid:
+  - lr: 0.01
+    lambdas:
+    - 0.0003
+    - 0.0003
+    - 1.0e-05
+  - lr: 0.01
+    lambdas:
+    - 0.003
+    - 0.003
+    - 1.0e-05
+  - lr: 0.01
+    lambdas:
+    - 0.0003
+    - 0.003
+    - 1.0e-05
+- name: mlp
+  grid:
+  - lr: 0.003
+  - lr: 0.01
+- name: nam
+  grid:
+  - lr: 0.003
+  - lr: 0.01
+- name: lasso
+  grid:
+  - alpha: 0.0001
+  - alpha: 0.001
+  - alpha: 0.01
+  - alpha: 0.1

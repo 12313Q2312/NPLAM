@@ -1,0 +1,134 @@
+{
+  "config": {
+    "seeds": [
+      10,
+      11,
+      12
+    ],
+    "tasks": [
+      {
+        "name": "california",
+        "samples": 4096
+      }
+    ],
+    "hidden": 50,
+    "epochs": 200,
+    "batch_size": 256,
+    "patience": 60,
+    "fs_threshold": 0.05,
+    "sd_threshold": 0.05,
+    "plots": true,
+    "models": [
+      {
+        "name": "nplam",
+        "grid": [
+          {
+            "lr": 0.01,
+            "lambdas": [
+              0.0003,
+              0.0003,
+              1e-05
+            ]
+          },
+          {
+            "lr": 0.01,
+            "lambdas": [
+              0.003,
+              0.003,
+              1e-05
+            ]
+          },
+          {
+            "lr": 0.01,
+            "lambdas": [
+              0.0003,
+              0.003,
+              1e-05
+            ]
+          }
+        ]
+      },
+      {
+        "name": "mlp",
+        "grid": [
+          {
+            "lr": 0.003
+          },
+          {
+            "lr": 0.01
+          }
+        ]
+      },
+      {
+        "name": "nam",
+        "grid": [
+          {
+            "lr": 0.003
+          },
+          {
+            "lr": 0.01
+          }
+        ]
+      },
+      {
+        "name": "lasso",
+        "grid": [
+          {
+            "alpha": 0.0001
+          },
+          {
+            "alpha": 0.001
+          },
+          {
+            "alpha": 0.01
+          },
+          {
+            "alpha": 0.1
+          }
+        ]
+      }
+    ]
+  },
+  "environment": {
+    "source_sha": "8e0da9bf85debe0f5eaa70b064be8088ffbd7e75",
+    "tracked_dirty": false,
+    "source_hashes": {
+      "src/nplam/__init__.py": "fbb7df8d28e4e23f5ba1391d824fc6b5c9fc3afd2f08b97d439dde19a7e7c985",
+      "src/nplam/cli.py": "be840996860274e6180ec155f9ee2e0939c13b24e72eb6695753693a5cbac295",
+      "src/nplam/data.py": "067a6eb7b8c17cf0b1610b051f766c1229cb7977b9430cf84b734e49b31791c6",
+      "src/nplam/experiment.py": "1b1f2cf8c2bf4d2acecfabb2c8c22bc598c37b7a54daca08e40afb15f81769c6",
+      "src/nplam/metrics.py": "f712cd38cfd58daa34550ac4b1997590756967d95484a4d32e5865b2de405bd7",
+      "src/nplam/model.py": "365c7cf666865a5c9422038af4e9626b83013764b0f08e7e74535c079d89b48e",
+      "src/nplam/plots.py": "08a9ae7e9482db393a482a4a0686ed84ecd86e8caec02409b4c4df0969904b82",
+      "src/nplam/real_data.py": "0878acadbd1877e5399f30a2ebc6fafe4c282e97bcc0413c1b8273f7820c501d",
+      "src/nplam/trainer.py": "2ba1869cdd85195cee7b01e7c9da38a89d8338277a1d3f1d07e8ffb706216f12"
+    },
+    "python": "3.14.2 (tags/v3.14.2:df79316, Dec  5 2025, 17:18:21) [MSC v.1944 64 bit (AMD64)]",
+    "platform": "Windows-11-10.0.26200-SP0",
+    "processor": "Intel64 Family 6 Model 197 Stepping 2, GenuineIntel",
+    "device": "cpu",
+    "threads": 1,
+    "packages": {
+      "torch": "2.14.1+cpu",
+      "numpy": "2.5.4",
+      "scikit-learn": "1.9.1",
+      "pandas": "3.1.1",
+      "matplotlib": "3.11.2",
+      "PyYAML": "6.0.3"
+    }
+  },
+  "command": [
+    "python",
+    "-m",
+    "nplam.cli",
+    "run",
+    "--config",
+    "runs\\full-20261111\\real-california.yaml",
+    "--output",
+    "runs\\full-20261111\\real-california"
+  ],
+  "started_utc": "2026-11-11T05:42:02Z",
+  "reused_runs": [],
+  "completed_utc": "2026-11-11T05:43:00Z",
+  "runs_completed": 12
+}
