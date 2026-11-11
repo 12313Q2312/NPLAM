@@ -6,6 +6,14 @@
 
 论文为 Zhu 等人的 [Neural partially linear additive model](https://doi.org/10.1007/s11704-023-2662-3)，*Frontiers of Computer Science*，18(6)，186334，2024。对照代码为作者的 [TensorFlow 实现](https://github.com/BestXuan/NPLAM/tree/73690d3ad9ae8687221775d37c3b4edc478f95a8)。
 
+## 结果速览
+
+本仓库记录了 **232 次评估**。在 30 维稀疏非线性任务中，模型识别出全部五个有效变量的非线性类型，但仍有较多误选。300 维稀疏任务的特征选择 F1 为 **0.033**。可在报告中分别查看预测误差、变量选择和结构识别的结果。
+
+![预测误差与结构恢复在五组任务上的对照](evidence/2026-11-11/figures/synthetic-summary.png)
+
+[完整结果](docs/experiment_report.md) · [逐种子数据与图](evidence/2026-11-11) · [两平台测试](https://github.com/12313Q2312/NPLAM/actions/runs/42971748551)
+
 ## 快速运行
 
 建议用 Python 3.11，在仓库目录创建虚拟环境。Windows PowerShell 可以直接调用虚拟环境中的 Python。
