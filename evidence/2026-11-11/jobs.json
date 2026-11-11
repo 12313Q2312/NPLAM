@@ -1,0 +1,136 @@
+[
+  {
+    "job": "synthetic-mixed30",
+    "exit_code": 0,
+    "command": [
+      "python",
+      "-m",
+      "nplam.cli",
+      "run",
+      "--config",
+      "runs\\full-20261111\\synthetic-mixed30.yaml",
+      "--output",
+      "runs\\full-20261111\\synthetic-mixed30",
+      "--reuse-from",
+      "runs\\benchmark\\synthetic-mixed30"
+    ]
+  },
+  {
+    "job": "synthetic-linear30",
+    "exit_code": 0,
+    "command": [
+      "python",
+      "-m",
+      "nplam.cli",
+      "run",
+      "--config",
+      "runs\\full-20261111\\synthetic-linear30.yaml",
+      "--output",
+      "runs\\full-20261111\\synthetic-linear30",
+      "--reuse-from",
+      "runs\\benchmark\\synthetic-linear30"
+    ]
+  },
+  {
+    "job": "synthetic-nonlinear30",
+    "exit_code": 0,
+    "command": [
+      "python",
+      "-m",
+      "nplam.cli",
+      "run",
+      "--config",
+      "runs\\full-20261111\\synthetic-nonlinear30.yaml",
+      "--output",
+      "runs\\full-20261111\\synthetic-nonlinear30",
+      "--reuse-from",
+      "runs\\benchmark\\synthetic-nonlinear30"
+    ]
+  },
+  {
+    "job": "synthetic-dense30",
+    "exit_code": 0,
+    "command": [
+      "python",
+      "-m",
+      "nplam.cli",
+      "run",
+      "--config",
+      "runs\\full-20261111\\synthetic-dense30.yaml",
+      "--output",
+      "runs\\full-20261111\\synthetic-dense30",
+      "--reuse-from",
+      "runs\\benchmark\\synthetic-dense30"
+    ]
+  },
+  {
+    "job": "highdim-sparse300",
+    "exit_code": 0,
+    "command": [
+      "python",
+      "-m",
+      "nplam.cli",
+      "run",
+      "--config",
+      "runs\\full-20261111\\highdim-sparse300.yaml",
+      "--output",
+      "runs\\full-20261111\\highdim-sparse300"
+    ]
+  },
+  {
+    "job": "ablations-mixed30",
+    "exit_code": 0,
+    "command": [
+      "python",
+      "-m",
+      "nplam.cli",
+      "run",
+      "--config",
+      "runs\\full-20261111\\ablations-mixed30.yaml",
+      "--output",
+      "runs\\full-20261111\\ablations-mixed30"
+    ]
+  },
+  {
+    "job": "real-california",
+    "exit_code": 0,
+    "command": [
+      "python",
+      "-m",
+      "nplam.cli",
+      "run",
+      "--config",
+      "runs\\full-20261111\\real-california.yaml",
+      "--output",
+      "runs\\full-20261111\\real-california"
+    ]
+  },
+  {
+    "job": "real-superconductivity",
+    "exit_code": 0,
+    "command": [
+      "python",
+      "-m",
+      "nplam.cli",
+      "run",
+      "--config",
+      "runs\\full-20261111\\real-superconductivity.yaml",
+      "--output",
+      "runs\\full-20261111\\real-superconductivity"
+    ]
+  },
+  {
+    "job": "real-beijing",
+    "exit_code": 0,
+    "command": [
+      "python",
+      "-m",
+      "nplam.cli",
+      "run",
+      "--config",
+      "runs\\full-20261111\\real-beijing.yaml",
+      "--output",
+      "runs\\full-20261111\\real-beijing"
+    ]
+  }
+]

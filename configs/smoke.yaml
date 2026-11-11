@@ -1,0 +1,19 @@
+seeds: [0]
+tasks:
+  - {name: mixed30, samples: 200}
+hidden: 10
+epochs: 10
+batch_size: 64
+patience: 10
+fs_threshold: 0.05
+sd_threshold: 0.05
+plots: true
+models:
+  - name: nplam
+    grid: [{lr: 0.01, lambdas: [0.0003, 0.0003, 0.00001]}]
+  - name: mlp
+    grid: [{lr: 0.01}]
+  - name: nam
+    grid: [{lr: 0.01}]
+  - name: lasso
+    grid: [{alpha: 0.001}, {alpha: 0.01}]
