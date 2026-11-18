@@ -29,6 +29,14 @@ py -3.11 -m venv .venv
 
 Linux 或 macOS 可将环境中的解释器路径换成 `.venv/bin/python`。其中的固定 CPU wheel 安装命令面向 CI 验证配置，即 Windows 和 Linux。冒烟实验生成合成数据，随后可以打开 `runs/smoke/REPORT.md` 和 `runs/smoke/mixed30-seed0/nplam/contributions.png`。再次运行时使用新的输出目录。
 
+## 如何复现与 CI 覆盖范围
+
+本地复现沿用上一节：Python 3.11、CPU 版 `torch==2.6.0`、`requirements-ci.txt`，然后执行 `python -m pytest -q` 与 `python -m nplam.cli run --config configs/smoke.yaml --output runs/smoke`。完整实验的配置、种子、数据边界和命令见[复现协议](docs/reproduction_protocol.md)。本次收尾不新增实验。
+
+工作流 [`.github/workflows/ci.yml`](.github/workflows/ci.yml)（`reproducibility-checks`）的权限是 `contents: read`。它在任意 pull request、push 到 `research/**`、push 到 `main`，以及手动 `workflow_dispatch` 时运行。其中 push 到 `main` 为本收尾新增；`workflow_dispatch` 在修改前已经存在。矩阵为 `ubuntu-latest` 与 `windows-latest`，使用 Python 3.11 和 CPU 版 `torch==2.6.0`，执行 `python -m pytest -q`，再执行 `configs/smoke.yaml` 并将 `runs/ci-smoke` 上传为产物。
+
+该工作流覆盖离线测试和冒烟配置。真实数据下载，以及 `synthetic.yaml`、`highdim.yaml`、`ablations.yaml`、`real.yaml`、`extended_300d.yaml`，不在此工作流内。已合并的 `main`（`253f3af`）在加入 push 到 `main` 之前没有 Actions 运行。此前最近一次成功运行是 `research/pytorch-reproduction` 上的 [run 42971748551](https://github.com/12313Q2312/NPLAM/actions/runs/42971748551)。
+
 ## 仓库内容
 
 | 内容 | 入口 |
