@@ -2,7 +2,7 @@ name: reproducibility-checks
 on:
   pull_request:
   push:
-    branches: ['research/**']
+    branches: ['research/**', 'main']
   workflow_dispatch:
 permissions:
   contents: read
